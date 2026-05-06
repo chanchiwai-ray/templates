@@ -5,24 +5,20 @@
 
 # Learn more at: https://documentation.ubuntu.com/juju/3.6/howto/manage-charms/#build-a-charm
 
-"""Charm the service.
-
-Refer to the following post for a quick-start guide that will help you
-develop a new k8s charm using the Operator Framework:
-
-https://discourse.charmhub.io/t/4208
-"""
+"""__CHARM_TITLE__ charm."""
 
 import logging
 import typing
 
 import ops
 
+from state import CharmBaseWithState, CharmState
+
 # Log messages can be retrieved using juju debug-log
 logger = logging.getLogger(__name__)
 
 
-class Charm(ops.CharmBase):
+class Charm(CharmBaseWithState):
     """Charm implementing holistic reconciliation pattern.
 
     The holistic pattern centralizes all state reconciliation logic into a single
@@ -39,25 +35,34 @@ class Charm(ops.CharmBase):
             args: Arguments passed to the CharmBase parent constructor.
         """
         super().__init__(*args)
-        self.framework.observe(self.on.install, self._on_install)
-        self.framework.observe(self.on.config_changed, self._on_config_changed)
 
-    def reconcile(self) -> None:
+        self._state: CharmState | None = None
+
+        self.framework.observe(self.on.install, self._on_install)
+        self.framework.observe(self.on.config_changed, self.reconcile)
+
+    def _on_install(self, _: ops.InstallEvent) -> None:
+        """Handle install event."""
+        # Handle any installation logic here, such as installing packages or setting up files.
+        pass
+
+    @property
+    def state(self) -> CharmState:
+        """Return the charm state, initializing it if necessary."""
+        if self._state is None:
+            self._state = CharmState(self)
+        return self._state
+
+    def reconcile(self, _: ops.EventBase) -> None:
         """Holistic reconciliation method.
 
         This method contains all the logic needed to reconcile the charm state.
         It is idempotent and can be called from any event handler.
         """
-        # TODO: implement charm reconciliation logic here
+        # TODO: implement charm reconciliation logic here This is where you would read the state,
+        # configure the application, write data to relations, etc. And set the unit status
+        # accordingly.
         self.unit.status = ops.ActiveStatus()
-
-    def _on_install(self, _: ops.InstallEvent) -> None:
-        """Handle install event."""
-        self.reconcile()
-
-    def _on_config_changed(self, _: ops.ConfigChangedEvent) -> None:
-        """Handle changed configuration."""
-        self.reconcile()
 
 
 if __name__ == "__main__":  # pragma: nocover

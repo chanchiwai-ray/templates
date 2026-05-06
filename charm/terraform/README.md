@@ -1,8 +1,6 @@
-<!-- Remember to update this file for your charm -- replace __CHARM_NAME__ and __REPO_PATH__ with the appropriate text. -->
+# Terraform module for __CHARM_TITLE__ charm
 
-# __CHARM_NAME__ Terraform module
-
-This folder contains a base [Terraform][Terraform] module for the __CHARM_NAME__ charm.
+This folder contains a base [Terraform][Terraform] module for the __CHARM_TITLE__.
 
 The module uses the [Terraform Juju provider][Terraform Juju provider] to model the charm deployment onto any Kubernetes
 environment managed by [Juju][Juju].
@@ -38,4 +36,4 @@ The complete list of available integrations can be found [in the Integrations ta
 [Juju]: https://juju.is
 [Terraform]: https://developer.hashicorp.com/terraform
 [Terraform Juju provider]: https://registry.terraform.io/providers/juju/juju/latest
-[__CHARM_NAME__-integrations]: https://charmhub.io/__CHARM_NAME__/integrations
+[__CHARM_NAME__-integrations]: __CHARMHUB_URL__/integrations

@@ -1,13 +1,5 @@
-<!--
-Avoid using this README file for information that is maintained or published elsewhere, e.g.:
-
-* metadata.yaml > published on Charmhub
-* documentation > published on (or linked to from) Charmhub
-* detailed contribution guide > documentation or CONTRIBUTING.md
-
-Use links instead.
--->
 # __CHARM_TITLE__
+
 <!-- Use this space for badges -->
 
 Describe your charm in 1-2 sentences. Include the software that the charm deploys (if applicable), and the substrate (VM/K8s).
@@ -15,7 +7,7 @@ Describe your charm in 1-2 sentences. Include the software that the charm deploy
 Like any Juju charm, this charm supports one-line deployment, configuration, integration, scaling, and more. For Charmed __CHARM_NAME__, this includes:
 * list or summary of app-specific features
 
-For information about how to deploy, integrate, and manage this charm, see the Official [__CHARM_NAME__ Documentation](__CHARM_DOCS_URL__).
+For information about how to deploy, integrate, and manage this charm, see the Official [__CHARM_NAME__ Documentation](__CHARMHUB_URL__).
 
 ## Get started
 <!--If the charm already contains a relevant how-to guide or tutorial in its documentation,
@@ -53,24 +45,3 @@ charm. For example, peer relation endpoints required by other charms for integra
 
 Otherwise, include a link the Charmhub documentation on integrations.
 -->
-
-## Learn more
-<!--
-Provide a list of resources, including the official documentation, developer documentation,
-an official website for the software and a troubleshooting guide. Note that this list is not
-exhaustive or always relevant for every charm. If there is no official troubleshooting guide,
-include a link to the relevant Matrix channel.
--->
-
-* [Read more]() <!--Link to the charm's official documentation-->
-* [Developer documentation]() <!--Link to any developer documentation (could be upstream)-->
-* [Official webpage]() <!--(Optional) Link to official upstream webpage/blog/marketing content-->
-* [Troubleshooting]() <!--(Optional) Link to a page or section about troubleshooting/FAQ-->
-
-## Project and community
-* [Issues]() <!--Link to GitHub issues (if applicable)-->
-* [Contributing]() <!--Link to any contribution guides, preferably for the source code-->
-* [Matrix]() <!--Link to contact info (if applicable), e.g. Matrix channel-->
-* [Launchpad]() <!--Link to Launchpad (if applicable)-->
-
-## Licensing and trademark (optional)

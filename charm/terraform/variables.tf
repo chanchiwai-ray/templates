@@ -20,7 +20,7 @@ variable "channel" {
 }
 
 variable "config" {
-  description = "Application config. Details about available options can be found at https://charmhub.io/__CHARM_NAME__/configurations."
+  description = "Application config. Details about available options can be found at __CHARMHUB_URL__/configurations."
   type        = map(string)
   default     = {}
 }

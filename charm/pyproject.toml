@@ -2,19 +2,22 @@
 # See LICENSE file for licensing details.
 
 [project]
-name = "__CHARM_NAME__"
-version = "0.0.0"
+name = "__CHARM_SUMMARY__"
+version = "1.0.0"
 description = "__CHARM_SUMMARY__"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
   "ops==3.6.0",
+  "pydantic>=2.13.3",
 ]
 
 [dependency-groups]

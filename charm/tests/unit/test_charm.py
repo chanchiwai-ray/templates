@@ -11,18 +11,6 @@ import ops.testing
 from charm import Charm
 
 
-def test_reconcile_on_install():
-    """
-    arrange: A freshly initialised charm state.
-    act: Run the install hook.
-    assert: The unit is active.
-    """
-    context = ops.testing.Context(charm_type=Charm)
-    state_in = ops.testing.State()
-    state_out = context.run(context.on.install(), state_in)
-    assert state_out.unit_status == ops.ActiveStatus()
-
-
 def test_reconcile_on_config_changed():
     """
     arrange: A freshly initialised charm state.

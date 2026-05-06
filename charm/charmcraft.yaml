@@ -5,15 +5,14 @@ type: charm
 name: __CHARM_NAME__
 title: __CHARM_TITLE__
 summary: __CHARM_SUMMARY__
-links:
-  source: https://github.com/__REPO_PATH__
-  issues: https://github.com/__REPO_PATH__/issues
-
 description: |
   __CHARM_DESCRIPTION__
 
+links:
+  source: __REPO_LINK__
+  issues: __ISSUES_LINK__
 
-base: ubuntu@24.04
+
 platforms:
   ubuntu@22.04:amd64:
   ubuntu@24.04:amd64:
