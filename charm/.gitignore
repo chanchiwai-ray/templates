@@ -1,4 +1,5 @@
 venv/
+.venv/
 build/
 *.charm
 .tox/
@@ -8,6 +9,7 @@ __pycache__/
 .idea
 .vscode
 .mypy_cache
+.ruff_cache
 *.egg-info/
 */*.rock
 terraform/tests/.terraform

@@ -50,7 +50,7 @@ class Charm(CharmBaseWithState):
     def state(self) -> CharmState:
         """Return the charm state, initializing it if necessary."""
         if self._state is None:
-            self._state = CharmState(self)
+            self._state = CharmState.from_charm(self)
         return self._state
 
     def reconcile(self, _: ops.EventBase) -> None:

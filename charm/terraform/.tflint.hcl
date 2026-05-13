@@ -1,4 +1,4 @@
-# Copyright 2026 Chi Wai Chan
+# Copyright 2026 __AUTHOR_NAME__
 # See LICENSE file for licensing details.
 
 rule "terraform_required_version" {
